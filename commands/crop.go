@@ -64,7 +64,7 @@ func RunCrop(cmd *cobra.Command, args []string) {
 		invert = "--filters.crop.outside=false"
 	}
 
-	utils.RunPdalOmni(input, output,
+	utils.RunPdalTranslate(input, output,
 		"-r", readerType, "-w", writerType, "--filter", "filters.crop",
 		geometry, invert, "-v10", "--debug")
 

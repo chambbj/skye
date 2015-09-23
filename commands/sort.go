@@ -40,7 +40,7 @@ func RunSort(cmd *cobra.Command, args []string) {
 	readerType, _ := utils.InferReaderFromExt(input)
 	writerType, _ := utils.InferWriterFromExt(output)
 
-	utils.RunPdalOmni(input, output,
+	utils.RunPdalTranslate(input, output,
 		"-r", readerType, "-w", writerType, "--filter", "filters.mortonorder",
 		"-v10", "--debug")
 

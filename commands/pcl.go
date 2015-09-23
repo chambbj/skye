@@ -51,7 +51,7 @@ func RunPCL(cmd *cobra.Command, args []string) {
 
 	vg := `--filters.pclblock.filename=` + pcl
 
-	utils.RunPdalOmni(input, output,
+	utils.RunPdalTranslate(input, output,
 		"-r", readerType, "-w", writerType, "--filter", "filters.pclblock",
 		vg, "-v10", "--debug")
 

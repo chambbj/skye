@@ -47,7 +47,7 @@ func RunConvert(cmd *cobra.Command, args []string) {
 		writer, _ = utils.InferWriterFromExt(output)
 	}
 
-	utils.RunPdalOmni(input, output,
+	utils.RunPdalTranslate(input, output,
 		"-r", reader, "-w", writer, "-v10", "--debug")
 
 	if view {

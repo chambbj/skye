@@ -52,7 +52,7 @@ func RunColorize(cmd *cobra.Command, args []string) {
 
 	rasterOpt := "--filters.colorization.raster=" + raster
 
-	utils.RunPdalOmni(input, output,
+	utils.RunPdalTranslate(input, output,
 		"-r", readerType, "-w", writerType, "--filter", "filters.colorization",
 		rasterOpt, "-v10", "--debug")
 

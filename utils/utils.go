@@ -73,7 +73,7 @@ func RunPdalPipeline(args ...string) {
 	RunPdal(args...)
 }
 
-func RunPdalOmni(args ...string) {
+func RunPdalTranslate(args ...string) {
 	args = append([]string{"translate"}, args...)
 	RunPdal(args...)
 }

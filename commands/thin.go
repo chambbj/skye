@@ -50,7 +50,7 @@ func RunThin(cmd *cobra.Command, args []string) {
 	offsetOpt := "--filters.decimation.offset=" + strconv.Itoa(offset)
 	limitOpt := "--filters.decimation.limit=" + strconv.Itoa(limit)
 
-	utils.RunPdalOmni(input, output,
+	utils.RunPdalTranslate(input, output,
 		"-r", readerType, "-w", writerType, "--filter", "filters.decimation",
 		stepOpt, offsetOpt, limitOpt, "-v10", "--debug")
 
